@@ -4,7 +4,7 @@ name: Update Plugins Repo
 #   1. Generates release notes via GitHub Models API (gpt-4o)
 #   2. Downloads and extracts the release ZIP
 #   3. Opens a PR against the community Plugins repo (vars.PLUGINS_REPO)
-#      from a branch in the sethwv/Plugins fork named auto/bump-SLUG-VERSION
+#      from a branch in the sethwv/Plugins fork named auto/bump/SLUG-VERSION
 
 on:
   repository_dispatch:
@@ -204,7 +204,7 @@ jobs:
           SLUG: ${{ steps.config.outputs.slug }}
           VERSION: ${{ steps.release.outputs.version }}
         run: |
-          BRANCH="auto/bump-${SLUG}-${VERSION}"
+          BRANCH="auto/bump/${SLUG}-${VERSION}"
 
           # Fork is idempotent - reuses existing fork
           # --clone also sets up the upstream remote automatically

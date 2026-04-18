@@ -45,25 +45,63 @@ fi
 echo "Comparing $OLD_TAG ... $NEW_TAG"
 
 # ---------------------------------------------------------------------------
-# 2. Fetch the diff
+# 2. Fetch the diff - smart file prioritisation
 # ---------------------------------------------------------------------------
-DIFF=$(gh api \
-  -H "Accept: application/vnd.github.diff" \
-  "repos/$REPO/compare/${OLD_TAG}...${NEW_TAG}" \
-  2>/dev/null || true)
+# Get the list of changed files with their patch sizes
+COMPARE=$(gh api "repos/$REPO/compare/${OLD_TAG}...${NEW_TAG}" 2>/dev/null || true)
 
-if [ -z "$DIFF" ]; then
-  echo "::warning::Could not fetch diff. Using fallback release notes."
+if [ -z "$COMPARE" ]; then
+  echo "::warning::Could not fetch compare data. Using fallback release notes."
   DIFF="(diff unavailable)"
-fi
+else
+  # Priority order for files (most signal first):
+  #   1. plugin.json / CHANGELOG / README / docs
+  #   2. Python source (.py) excluding __init__ and migrations
+  #   3. Everything else
+  # Files to skip entirely: lock files, generated, binary-like
+  SKIP_PATTERN='\.(lock|min\.js|map|png|jpg|gif|svg|ico|woff|ttf|eot)$|package-lock|yarn\.lock|poetry\.lock|__pycache__|\.pyc'
 
-# Truncate to ~100 KB to stay within model context limits
-MAX_DIFF_BYTES=16000
-DIFF_BYTES=${#DIFF}
-if (( DIFF_BYTES > MAX_DIFF_BYTES )); then
-  echo "::notice::Diff is ${DIFF_BYTES} bytes; truncating to ${MAX_DIFF_BYTES} bytes."
-  DIFF="${DIFF:0:$MAX_DIFF_BYTES}
-... (diff truncated)"
+  PRIORITY_FILES=$(echo "$COMPARE" | jq -r '
+    .files[]
+    | select(.filename | test("'"$SKIP_PATTERN"'") | not)
+    | [
+        (if (.filename | test("plugin\\.json|CHANGELOG|README|HIGHLIGHTS|METRICS|\\.md$")) then 0
+         elif (.filename | test("\\.py$") and (test("__init__|migration") | not)) then 1
+         else 2 end),
+        .changes,
+        .filename,
+        (.patch // "")
+      ]
+    | @json
+  ' 2>/dev/null | sort -t$'\t' -k1,1n || true)
+
+  MAX_DIFF_BYTES=14000
+  DIFF=""
+  INCLUDED=0
+  SKIPPED=0
+
+  while IFS= read -r line; do
+    [ -z "$line" ] && continue
+    FILENAME=$(echo "$line" | jq -r '.[2]')
+    PATCH=$(echo "$line"    | jq -r '.[3]')
+    [ -z "$PATCH" ] && continue
+
+    FILE_HEADER="diff --git a/$FILENAME b/$FILENAME\n"
+    CANDIDATE="${DIFF}${FILE_HEADER}${PATCH}\n"
+    if (( ${#CANDIDATE} <= MAX_DIFF_BYTES )); then
+      DIFF="$CANDIDATE"
+      INCLUDED=$(( INCLUDED + 1 ))
+    else
+      SKIPPED=$(( SKIPPED + 1 ))
+    fi
+  done <<< "$PRIORITY_FILES"
+
+  echo "::notice::Diff: $INCLUDED files included, $SKIPPED skipped (budget: ${MAX_DIFF_BYTES} bytes, used: ${#DIFF} bytes)."
+
+  if [ -z "$DIFF" ]; then
+    echo "::warning::No diff content available. Using fallback."
+    DIFF="(diff unavailable)"
+  fi
 fi
 
 # ---------------------------------------------------------------------------
@@ -77,13 +115,18 @@ IMPORTANT - CI OUTPUT FORMAT:
 You are running in a CI environment, not an interactive editor. Do NOT create files.
 Instead, return a JSON object with exactly these three fields:
   - \"highlights\": bullet-point list (each line starts with \"- \"), user-facing features only
-  - \"pr_title\": a concise title (no version prefix, no square brackets)
+  - \"pr_title\": a short imperative description of the changes (no version prefix, no square brackets, no plugin name)
   - \"pr_body\": a single paragraph describing what changed and why
+
+The commit message subject will be formatted as \"v{VERSION}: {pr_title}\", for example:
+  \"v3.0.0: Add user metrics and remove legacy stream labels\"
+  \"v1.0.0: Initial release\"
+So pr_title should complete that sentence naturally and be under 60 characters.
 
 Example response:
 {
   \"highlights\": \"- Added X\\n- Fixed Y\",
-  \"pr_title\": \"User metrics, expanded type labels, legacy metric removal\",
+  \"pr_title\": \"Add user metrics and remove legacy stream labels\",
   \"pr_body\": \"Adds opt-in user metrics and removes all legacy formats. Minimum Dispatcharr version raised to v0.22.0.\"
 }
 
@@ -164,6 +207,8 @@ if [ -z "$HIGHLIGHTS" ] || [ -z "$PR_TITLE" ] || [ -z "$PR_BODY" ]; then
   HIGHLIGHTS="- Updated to v${VERSION}"
   PR_TITLE="v${VERSION}: Plugin update"
   PR_BODY="Updates plugin to v${VERSION}. See release: ${RELEASE_URL}"
+else
+  PR_TITLE="v${VERSION}: ${PR_TITLE}"
 fi
 
 printf '%s\n' "$HIGHLIGHTS" > "$NOTES_DIR/HIGHLIGHTS.md"
