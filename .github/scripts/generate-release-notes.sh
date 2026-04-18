@@ -47,47 +47,46 @@ echo "Comparing $OLD_TAG ... $NEW_TAG"
 # ---------------------------------------------------------------------------
 # 2. Fetch the diff - smart file prioritisation
 # ---------------------------------------------------------------------------
-# Get the list of changed files with their patch sizes
+# Get the list of changed files with their patches
 COMPARE=$(gh api "repos/$REPO/compare/${OLD_TAG}...${NEW_TAG}" 2>/dev/null || true)
 
 if [ -z "$COMPARE" ]; then
   echo "::warning::Could not fetch compare data. Using fallback release notes."
   DIFF="(diff unavailable)"
 else
-  # Priority order for files (most signal first):
-  #   1. plugin.json / CHANGELOG / README / docs
-  #   2. Python source (.py) excluding __init__ and migrations
-  #   3. Everything else
-  # Files to skip entirely: lock files, generated, binary-like
-  SKIP_PATTERN='\.(lock|min\.js|map|png|jpg|gif|svg|ico|woff|ttf|eot)$|package-lock|yarn\.lock|poetry\.lock|__pycache__|\.pyc'
-
+  # Sort files by signal value (docs/config first, then .py, then rest)
+  # Skip lock files, generated files, binaries
+  # Base64-encode patches so newlines don't break the while-read loop
   PRIORITY_FILES=$(echo "$COMPARE" | jq -r '
-    .files[]
-    | select(.filename | test("'"$SKIP_PATTERN"'") | not)
-    | [
-        (if (.filename | test("plugin\\.json|CHANGELOG|README|HIGHLIGHTS|METRICS|\\.md$")) then 0
-         elif (.filename | test("\\.py$") and (test("__init__|migration") | not)) then 1
-         else 2 end),
-        .changes,
-        .filename,
-        (.patch // "")
-      ]
-    | @json
-  ' 2>/dev/null | sort -t$'\t' -k1,1n || true)
+    [.files[]
+      | select(.filename | test("\\.(lock|min\\.js|map|png|jpg|gif|svg|ico|woff|ttf|eot)$|package-lock|yarn\\.lock|poetry\\.lock|__pycache__|\\.pyc") | not)
+      | select(.patch != null)
+      | {
+          p: (if (.filename | test("plugin\\.json|CHANGELOG|README|HIGHLIGHTS|METRICS|\\.md$")) then 0
+              elif (.filename | test("\\.py$") and (.filename | test("__init__|migration") | not)) then 1
+              else 2 end),
+          f: .filename,
+          c: (.patch | @base64)
+        }
+    ]
+    | sort_by(.p)
+    | .[]
+    | "\(.f)\t\(.c)"
+  ' 2>/dev/null || true)
 
   MAX_DIFF_BYTES=14000
   DIFF=""
   INCLUDED=0
   SKIPPED=0
 
-  while IFS= read -r line; do
-    [ -z "$line" ] && continue
-    FILENAME=$(echo "$line" | jq -r '.[2]')
-    PATCH=$(echo "$line"    | jq -r '.[3]')
+  while IFS=$'\t' read -r FILENAME PATCH_B64; do
+    [ -z "$FILENAME" ] && continue
+    PATCH=$(echo "$PATCH_B64" | base64 -d 2>/dev/null || true)
     [ -z "$PATCH" ] && continue
 
-    FILE_HEADER="diff --git a/$FILENAME b/$FILENAME\n"
-    CANDIDATE="${DIFF}${FILE_HEADER}${PATCH}\n"
+    CANDIDATE="${DIFF}diff --git a/${FILENAME} b/${FILENAME}
+${PATCH}
+"
     if (( ${#CANDIDATE} <= MAX_DIFF_BYTES )); then
       DIFF="$CANDIDATE"
       INCLUDED=$(( INCLUDED + 1 ))
