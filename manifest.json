@@ -32,6 +32,7 @@
       "latest_sha256": "41788e08d31e7a3b6ec2e19fa4d385b056557c31d214b50bad4e543aea68bf01",
       "icon_url": "plugins/embyfin_stream_cleanup/logo.png",
       "min_dispatcharr_version": "v0.22.0",
+      "discord_thread": "https://discord.com/channels/1340492560220684331/1491487318832447668",
       "help_url": "https://github.com/sethwv/emby-stream-cleanup"
     },
     {
