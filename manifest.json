@@ -40,13 +40,8 @@
       "description": "LDAP/Active Directory authentication for UI login and XC endpoints",
       "author": "sethwv",
       "license": "MIT",
-      "latest_version": "0.0.1",
-      "last_updated": "2026-04-18T19:00:42Z",
       "manifest_url": "plugins/ldap_auth/manifest.json",
-      "latest_url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-      "latest_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
       "icon_url": "plugins/ldap_auth/logo.png",
-      "min_dispatcharr_version": "v0.22.0",
       "help_url": "https://github.com/sethwv/dispatcharr-ldap"
     }
   ]

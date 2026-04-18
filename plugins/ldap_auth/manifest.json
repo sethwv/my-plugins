@@ -4,17 +4,7 @@
   "description": "LDAP/Active Directory authentication for UI login and XC endpoints",
   "author": "sethwv",
   "license": "MIT",
-  "latest_version": "0.0.1",
   "versions": [
-    {
-      "version": "0.0.1",
-      "url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-      "checksum_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
-      "build_timestamp": "2026-04-18T19:00:42Z",
-      "commit_sha": "3866fdfa6739f7f1763e2acd3c746695abc6a4f9",
-      "commit_sha_short": "3866fdfa",
-      "min_dispatcharr_version": "v0.22.0"
-    },
     {
       "version": "0.0.0-dev-f8b8bfde",
       "url": "https://github.com/sethwv/disp-ldap/releases/download/dev-latest/ldap-auth-dev-latest.zip",
@@ -25,14 +15,5 @@
       "commit_sha_short": "3866fdfa",
       "min_dispatcharr_version": "v0.22.0"
     }
-  ],
-  "latest": {
-    "version": "0.0.1",
-    "url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-    "checksum_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
-    "build_timestamp": "2026-04-18T19:00:42Z",
-    "commit_sha": "3866fdfa6739f7f1763e2acd3c746695abc6a4f9",
-    "commit_sha_short": "3866fdfa",
-    "min_dispatcharr_version": "v0.22.0"
-  }
+  ]
 }
