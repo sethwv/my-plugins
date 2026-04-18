@@ -99,10 +99,10 @@
       "commit_sha_short": "6b2c98fa"
     },
     {
-      "version": "2.4.2-dev-ad169b10",
+      "version": "2.4.2-dev-bd070979",
       "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/dev-latest/dispatcharr-exporter-dev-latest.zip",
-      "checksum_sha256": "0f7269e6bda492da367a04fcc4fd654764e41720ee49f3d6f115b27662d24ca8",
-      "build_timestamp": "2026-04-02T23:09:53Z",
+      "checksum_sha256": "4a7377f1e44b4834ff7ed918a31fec213c89e8e8036ed641c8c243ff68535188",
+      "build_timestamp": "2026-04-18T17:10:53Z",
       "prerelease": true,
       "commit_sha": "8a1f1b480d2ab7474588f770beeb70d09b4b714a",
       "commit_sha_short": "8a1f1b48",
