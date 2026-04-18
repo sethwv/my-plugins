@@ -4,7 +4,17 @@
   "description": "Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections",
   "author": "sethwv",
   "license": "MIT",
+  "latest_version": "1.0.0",
   "versions": [
+    {
+      "version": "1.0.0",
+      "url": "https://github.com/sethwv/embyfin-stream-cleanup/releases/download/v1.0.0/embyfin-stream-cleanup-1.0.0.zip",
+      "checksum_sha256": "41788e08d31e7a3b6ec2e19fa4d385b056557c31d214b50bad4e543aea68bf01",
+      "build_timestamp": "2026-04-18T17:30:22Z",
+      "commit_sha": "12548e9999f1f776f42bd44f5d18e682a8e3f88c",
+      "commit_sha_short": "12548e99",
+      "min_dispatcharr_version": "v0.22.0"
+    },
     {
       "version": "0.0.0-dev-61a5ba24",
       "url": "https://github.com/sethwv/embyfin-stream-cleanup/releases/download/dev-latest/embyfin-stream-cleanup-dev-latest.zip",
@@ -15,5 +25,14 @@
       "commit_sha_short": "07b7cf59",
       "min_dispatcharr_version": "v0.22.0"
     }
-  ]
+  ],
+  "latest": {
+    "version": "1.0.0",
+    "url": "https://github.com/sethwv/embyfin-stream-cleanup/releases/download/v1.0.0/embyfin-stream-cleanup-1.0.0.zip",
+    "checksum_sha256": "41788e08d31e7a3b6ec2e19fa4d385b056557c31d214b50bad4e543aea68bf01",
+    "build_timestamp": "2026-04-18T17:30:22Z",
+    "commit_sha": "12548e9999f1f776f42bd44f5d18e682a8e3f88c",
+    "commit_sha_short": "12548e99",
+    "min_dispatcharr_version": "v0.22.0"
+  }
 }

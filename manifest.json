@@ -25,8 +25,13 @@
       "description": "Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections",
       "author": "sethwv",
       "license": "MIT",
+      "latest_version": "1.0.0",
+      "last_updated": "2026-04-18T17:30:22Z",
       "manifest_url": "plugins/embyfin_stream_cleanup/manifest.json",
+      "latest_url": "https://github.com/sethwv/embyfin-stream-cleanup/releases/download/v1.0.0/embyfin-stream-cleanup-1.0.0.zip",
+      "latest_sha256": "41788e08d31e7a3b6ec2e19fa4d385b056557c31d214b50bad4e543aea68bf01",
       "icon_url": "plugins/embyfin_stream_cleanup/logo.png",
+      "min_dispatcharr_version": "v0.22.0",
       "help_url": "https://github.com/sethwv/emby-stream-cleanup"
     },
     {
