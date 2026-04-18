@@ -13,11 +13,16 @@
 			"path": "../dispatcharr-exporter"
 		},
 		{
+			"name": "dispatcharr-ldap",
+			"path": "../dispatcharr-ldap"
+		},
+		{
 			"name": "Dispatcharr",
 			"path": "../plugin-repo-work/Dispatcharr"
 		},
 		{
-			"path": "../dispatcharr-ldap"
+			"name": "Plugins",
+			"path": "../plugin-repo-work/Plugins"
 		}
 	],
 	"settings": {
