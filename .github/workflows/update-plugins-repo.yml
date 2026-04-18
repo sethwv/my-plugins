@@ -268,6 +268,7 @@ jobs:
           git push -f origin "$BRANCH"
 
       - name: Create pull request
+        id: pr
         if: steps.check.outputs.skip == 'false'
         env:
           SLUG: ${{ steps.config.outputs.slug }}
@@ -305,9 +306,65 @@ jobs:
 
           ${CHECKLIST}"
 
-          gh pr create \
+          PR_URL=$(gh pr create \
             --repo "$PLUGINS_REPO" \
             --base main \
             --head "${FORK_OWNER}:${BRANCH}" \
             --title "$FULL_PR_TITLE" \
-            --body "$PR_BODY"
+            --body "$PR_BODY")
+
+          echo "pr_url=$PR_URL"       >> "$GITHUB_OUTPUT"
+          echo "pr_title=$FULL_PR_TITLE" >> "$GITHUB_OUTPUT"
+
+      - name: Write job summary
+        if: always()
+        env:
+          SLUG: ${{ steps.config.outputs.slug }}
+          VERSION: ${{ steps.release.outputs.version }}
+          CURRENT_VERSION: ${{ steps.current.outputs.current_version }}
+          IS_NEW_PLUGIN: ${{ steps.current.outputs.is_new_plugin }}
+          BRANCH: ${{ steps.fork.outputs.branch }}
+          FORK_OWNER: ${{ steps.fork.outputs.fork_owner }}
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+          PR_URL: ${{ steps.pr.outputs.pr_url }}
+          PR_TITLE: ${{ steps.pr.outputs.pr_title }}
+          SKIP: ${{ steps.check.outputs.skip }}
+          SOURCE_REPO: ${{ steps.source.outputs.repo }}
+        run: |
+          {
+            if [ -n "$PR_URL" ]; then
+              echo "## Plugin PR Created"
+              echo ""
+              echo "| | |"
+              echo "|---|---|"
+              echo "| **PR** | [$PR_TITLE]($PR_URL) |"
+              echo "| **Plugin** | \`$SLUG\` |"
+              echo "| **Version** | \`$CURRENT_VERSION\` → \`$VERSION\` |"
+              if [ "$IS_NEW_PLUGIN" = "true" ]; then
+                echo "| **Type** | New plugin |"
+              else
+                echo "| **Type** | Update |"
+              fi
+              echo "| **Branch** | \`${FORK_OWNER}:${BRANCH}\` |"
+              echo "| **Source release** | [v${VERSION}]($RELEASE_URL) |"
+              if [ -f /tmp/release-notes/PR.md ]; then
+                echo ""
+                echo "### Commit message"
+                echo "\`\`\`"
+                cat /tmp/release-notes/PR.md
+                echo "\`\`\`"
+              fi
+            elif [ "$SKIP" = "true" ]; then
+              echo "## Skipped"
+              echo ""
+              echo "No update needed for \`$SLUG\` — already at v${VERSION} or a PR is already open."
+            elif [ -z "$SLUG" ]; then
+              echo "## Skipped"
+              echo ""
+              echo "Repo \`$SOURCE_REPO\` is not tracked in \`repos.json\`."
+            else
+              echo "## Failed"
+              echo ""
+              echo "Workflow did not complete successfully for \`$SLUG\` v${VERSION}. Check the step logs above."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
