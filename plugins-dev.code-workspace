@@ -19,10 +19,6 @@
 		{
 			"name": "Dispatcharr",
 			"path": "../plugin-repo-work/Dispatcharr"
-		},
-		{
-			"name": "Plugins",
-			"path": "../plugin-repo-work/Plugins"
 		}
 	],
 	"settings": {
