@@ -104,7 +104,7 @@ REQUEST_BODY=$(jq -n \
   --arg system "$SYSTEM_PROMPT" \
   --arg user "$USER_MESSAGE" \
   '{
-    model: "openai/gpt-4o",
+    model: "gpt-4o",
     messages: [
       {role: "system", content: $system},
       {role: "user",   content: $user}
@@ -117,7 +117,7 @@ API_RESPONSE=$(curl -s -w "\n__HTTP_STATUS__:%{http_code}" \
   -H "Authorization: Bearer $SETH_PAT" \
   -H "Content-Type: application/json" \
   -d "$REQUEST_BODY" \
-  "https://models.github.com/inference/chat/completions")
+  "https://models.inference.ai.azure.com/chat/completions")
 
 # Split status code from body
 HTTP_STATUS=$(echo "$API_RESPONSE" | tail -1 | sed 's/__HTTP_STATUS__://')
