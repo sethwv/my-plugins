@@ -41,10 +41,10 @@
       "author": "sethwv",
       "license": "MIT",
       "latest_version": "0.0.1",
-      "last_updated": "2026-04-18T18:55:50Z",
+      "last_updated": "2026-04-18T19:00:42Z",
       "manifest_url": "plugins/ldap_auth/manifest.json",
       "latest_url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-      "latest_sha256": "6282321a2d1553732531f0b1fcf3d5456f851116d463f0c265e211c39ecd3cd6",
+      "latest_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
       "icon_url": "plugins/ldap_auth/logo.png",
       "min_dispatcharr_version": "v0.22.0",
       "help_url": "https://github.com/sethwv/dispatcharr-ldap"

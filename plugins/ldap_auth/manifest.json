@@ -9,8 +9,8 @@
     {
       "version": "0.0.1",
       "url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-      "checksum_sha256": "6282321a2d1553732531f0b1fcf3d5456f851116d463f0c265e211c39ecd3cd6",
-      "build_timestamp": "2026-04-18T18:55:50Z",
+      "checksum_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
+      "build_timestamp": "2026-04-18T19:00:42Z",
       "commit_sha": "3866fdfa6739f7f1763e2acd3c746695abc6a4f9",
       "commit_sha_short": "3866fdfa",
       "min_dispatcharr_version": "v0.22.0"
@@ -29,8 +29,8 @@
   "latest": {
     "version": "0.0.1",
     "url": "https://github.com/sethwv/disp-ldap/releases/download/v0.0.1/ldap-auth-0.0.1.zip",
-    "checksum_sha256": "6282321a2d1553732531f0b1fcf3d5456f851116d463f0c265e211c39ecd3cd6",
-    "build_timestamp": "2026-04-18T18:55:50Z",
+    "checksum_sha256": "d7adf429557ee71d3a0d99a91c76ef9d980169eb3673f9a8378157ae786e4e75",
+    "build_timestamp": "2026-04-18T19:00:42Z",
     "commit_sha": "3866fdfa6739f7f1763e2acd3c746695abc6a4f9",
     "commit_sha_short": "3866fdfa",
     "min_dispatcharr_version": "v0.22.0"
