@@ -8,7 +8,7 @@
   "versions": [
     {
       "version": "3.0.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
       "checksum_sha256": "8e457cbd0596f8474750a98e43e19c56a192b6297d58c5e6ca4a354e4150889d",
       "build_timestamp": "2026-04-18T17:30:48Z",
       "commit_sha": "3cd03ad90f9b8162faed9a0c7e81e7a13ce11dfb",
@@ -17,7 +17,7 @@
     },
     {
       "version": "2.4.2",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.4.2/dispatcharr-exporter-2.4.2.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.4.2/dispatcharr-exporter-2.4.2.zip",
       "checksum_sha256": "0507f1cec783615aae6694b62cfb268b81f08965e9b5750f92ad155fae12c07d",
       "build_timestamp": "2026-03-30T19:00:59Z",
       "commit_sha": "016b053f0bc4f0daf2627ff2b3ad5f13b6fdf37d",
@@ -26,7 +26,7 @@
     },
     {
       "version": "2.4.1",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.4.1/dispatcharr-exporter-2.4.1.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.4.1/dispatcharr-exporter-2.4.1.zip",
       "checksum_sha256": "f30ee4769de10f522f624296fc3398c87696035d2cae0a62e52101823293c500",
       "build_timestamp": "2026-03-26T17:58:41Z",
       "commit_sha": "d897b533706946102f089df6e13738e48b4ae482",
@@ -35,7 +35,7 @@
     },
     {
       "version": "2.4.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.4.0/dispatcharr-exporter-2.4.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.4.0/dispatcharr-exporter-2.4.0.zip",
       "checksum_sha256": "a0ddc589d3b052a88512b3e9e6c8bfc4252bc7bdf0d18f511ec7d7f81c2d0fb5",
       "build_timestamp": "2026-03-01T13:42:15Z",
       "commit_sha": "52e4c719ada810ca0d89472215e90fbd4371fb14",
@@ -44,7 +44,7 @@
     },
     {
       "version": "2.3.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.3.0/dispatcharr-exporter-2.3.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.3.0/dispatcharr-exporter-2.3.0.zip",
       "checksum_sha256": "5494b753cfb81890ad20508792bd2fc394f18584508bdac92e645c8ba7eeb57a",
       "build_timestamp": "2026-02-12T15:43:43Z",
       "commit_sha": "079ddbdeb9870d79085011cca0afe2d456d37a03",
@@ -53,7 +53,7 @@
     },
     {
       "version": "2.2.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.2.0/dispatcharr-exporter-2.2.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.2.0/dispatcharr-exporter-2.2.0.zip",
       "checksum_sha256": "3dc5517722857e2efee2a297b0233eafd0c238650bde9fef87479b035df62d80",
       "build_timestamp": "2026-01-05T17:35:54Z",
       "commit_sha": "0a79ce8bec3a6801b17a9cf27c060657512962ca",
@@ -61,7 +61,7 @@
     },
     {
       "version": "2.1.1",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.1.1/dispatcharr-exporter-2.1.1.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.1.1/dispatcharr-exporter-2.1.1.zip",
       "checksum_sha256": "828b87c8c746e88a43c95a85a6b24e04b216c6a586b4bfe78571587f3781a38c",
       "build_timestamp": "2025-12-31T22:33:16Z",
       "commit_sha": "180fc7dd323120d0456cc332b436e055b18040b2",
@@ -69,7 +69,7 @@
     },
     {
       "version": "2.1.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.1.0/dispatcharr-exporter-2.1.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.1.0/dispatcharr-exporter-2.1.0.zip",
       "checksum_sha256": "284cdc43ee1c8ce841dcc571b4119a2690e6b180f3fe9ffc935540bf0350ea99",
       "build_timestamp": "2025-12-31T17:47:24Z",
       "commit_sha": "e7e870d53966261163ce2a3aea8a13ec72bb2d12",
@@ -77,7 +77,7 @@
     },
     {
       "version": "2.0.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v2.0.0/dispatcharr-exporter-2.0.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v2.0.0/dispatcharr-exporter-2.0.0.zip",
       "checksum_sha256": "f3f5db28f3587b59bffac607775b17904ad57f71ba4c880729eb0902fc56d328",
       "build_timestamp": "2025-12-29T23:46:38Z",
       "commit_sha": "33b726232b3eaab51d9c894dbd35aef87116bb85",
@@ -85,7 +85,7 @@
     },
     {
       "version": "1.1.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v1.1.0/dispatcharr-exporter-1.1.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v1.1.0/dispatcharr-exporter-1.1.0.zip",
       "checksum_sha256": "86bf02cf0321037c9971b0ccba651a38c309faf7af646477b51f86efda6cefff",
       "build_timestamp": "2025-12-22T18:20:57Z",
       "commit_sha": "517382313526881449e0056886d335fcdd9e14c5",
@@ -93,7 +93,7 @@
     },
     {
       "version": "1.0.1",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v1.0.1/dispatcharr-exporter-1.0.1.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v1.0.1/dispatcharr-exporter-1.0.1.zip",
       "checksum_sha256": "c797eef835bec978ec134d99a710e2ce83cc1b6a6a635cccde5974144fc25ca3",
       "build_timestamp": "2025-12-18T19:08:18Z",
       "commit_sha": "844f5dba07b9b3d06dbc362a8548f13a3425aba4",
@@ -101,7 +101,7 @@
     },
     {
       "version": "1.0.0",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v1.0.0/dispatcharr-exporter-1.0.0.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v1.0.0/dispatcharr-exporter-1.0.0.zip",
       "checksum_sha256": "cb722d967028f003651c49fa8ce3f9d4a59660711126d363d8d44a4437b9e01b",
       "build_timestamp": "2025-12-18T17:01:24Z",
       "commit_sha": "6b2c98fa3981d957f5b3c2b3d5f95953206fd19b",
@@ -109,7 +109,7 @@
     },
     {
       "version": "2.4.2-dev-bd070979",
-      "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/dev-latest/dispatcharr-exporter-dev-latest.zip",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/dev-latest/dispatcharr-exporter-dev-latest.zip",
       "checksum_sha256": "4a7377f1e44b4834ff7ed918a31fec213c89e8e8036ed641c8c243ff68535188",
       "build_timestamp": "2026-04-18T17:10:53Z",
       "prerelease": true,
@@ -120,7 +120,7 @@
   ],
   "latest": {
     "version": "3.0.0",
-    "url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
+    "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
     "checksum_sha256": "8e457cbd0596f8474750a98e43e19c56a192b6297d58c5e6ca4a354e4150889d",
     "build_timestamp": "2026-04-18T17:30:48Z",
     "commit_sha": "3cd03ad90f9b8162faed9a0c7e81e7a13ce11dfb",

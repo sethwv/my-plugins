@@ -7,7 +7,7 @@
   "versions": [
     {
       "version": "0.0.0-dev-f8b8bfde",
-      "url": "https://github.com/sethwv/disp-ldap/releases/download/dev-latest/ldap-auth-dev-latest.zip",
+      "url": "https://github.com/swvn-dispatch/disp-ldap/releases/download/dev-latest/ldap-auth-dev-latest.zip",
       "checksum_sha256": "fbb5b9146f57ee1a362e5763c976d740c22ceab3b8abac416294e0a3d58dd8f7",
       "build_timestamp": "2026-04-13T17:13:30Z",
       "prerelease": true,

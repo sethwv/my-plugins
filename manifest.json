@@ -1,7 +1,7 @@
 {
-  "registry_name": "sethwv/dev-plugins",
-  "registry_url": "https://github.com/sethwv/my-plugins",
-  "root_url": "https://raw.githubusercontent.com/sethwv/my-plugins/manifest",
+  "registry_name": "swvn-dispatch/dev-plugins",
+  "registry_url": "https://github.com/swvn-dispatch/plugins",
+  "root_url": "https://raw.githubusercontent.com/swvn-dispatch/plugins/manifest",
   "plugins": [
     {
       "slug": "dispatcharr_exporter",
@@ -12,12 +12,12 @@
       "latest_version": "3.0.0",
       "last_updated": "2026-04-18T17:30:48Z",
       "manifest_url": "plugins/dispatcharr_exporter/manifest.json",
-      "latest_url": "https://github.com/sethwv/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
+      "latest_url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
       "latest_sha256": "8e457cbd0596f8474750a98e43e19c56a192b6297d58c5e6ca4a354e4150889d",
       "icon_url": "plugins/dispatcharr_exporter/logo.png",
       "min_dispatcharr_version": "v0.22.0",
       "discord_thread": "https://discord.com/channels/1340492560220684331/1451260201775923421",
-      "help_url": "https://github.com/sethwv/dispatcharr-exporter"
+      "help_url": "https://github.com/swvn-dispatch/dispatcharr-exporter"
     },
     {
       "slug": "embyfin_stream_cleanup",
@@ -28,12 +28,12 @@
       "latest_version": "1.1.0",
       "last_updated": "2026-04-27T15:01:44Z",
       "manifest_url": "plugins/embyfin_stream_cleanup/manifest.json",
-      "latest_url": "https://github.com/sethwv/embyfin-stream-cleanup/releases/download/v1.1.0/embyfin-stream-cleanup-1.1.0.zip",
+      "latest_url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.0/embyfin-stream-cleanup-1.1.0.zip",
       "latest_sha256": "2f79e67f7bba7658854636b006fabf88510ba557aaaa44d3ee75fa9db17206c7",
       "icon_url": "plugins/embyfin_stream_cleanup/logo.png",
       "min_dispatcharr_version": "v0.22.0",
       "discord_thread": "https://discord.com/channels/1340492560220684331/1491487318832447668",
-      "help_url": "https://github.com/sethwv/emby-stream-cleanup"
+      "help_url": "https://github.com/swvn-dispatch/emby-stream-cleanup"
     },
     {
       "slug": "ldap_auth",
@@ -43,7 +43,7 @@
       "license": "MIT",
       "manifest_url": "plugins/ldap_auth/manifest.json",
       "icon_url": "plugins/ldap_auth/logo.png",
-      "help_url": "https://github.com/sethwv/dispatcharr-ldap"
+      "help_url": "https://github.com/swvn-dispatch/dispatcharr-ldap"
     }
   ]
 }
