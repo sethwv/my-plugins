@@ -34,13 +34,13 @@
       "min_dispatcharr_version": "v0.22.0"
     },
     {
-      "version": "1.1.0-dev-2094676b",
+      "version": "1.1.0-dev-93abfd2e",
       "url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/dev-latest/embyfin-stream-cleanup-dev-latest.zip",
-      "checksum_sha256": "bdb6a66739cefa620062bec033cd047ac2e04965336348895141bd418eecb086",
-      "build_timestamp": "2026-04-27T16:01:42Z",
+      "checksum_sha256": "0098410536ab6e1ae79b47ffd531e8b6f76355641da29c0a5d9ef03053fc8479",
+      "build_timestamp": "2026-04-28T18:09:49Z",
       "prerelease": true,
-      "commit_sha": "65490c94def1f30e49c9e4e8ccd99109b4643abd",
-      "commit_sha_short": "65490c94",
+      "commit_sha": "58aa878ef931dda150ca8885d749d10868d1bb73",
+      "commit_sha_short": "58aa878e",
       "min_dispatcharr_version": "v0.22.0"
     }
   ],
