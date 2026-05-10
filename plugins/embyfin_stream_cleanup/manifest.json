@@ -4,8 +4,17 @@
   "description": "Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections",
   "author": "sethwv",
   "license": "MIT",
-  "latest_version": "1.1.1",
+  "latest_version": "1.1.2",
   "versions": [
+    {
+      "version": "1.1.2",
+      "url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.2/embyfin-stream-cleanup-1.1.2.zip",
+      "checksum_sha256": "50473f2ac6ebf5f2fd693d688043c601fdc4f0514f769f3eec6832427f82a3ca",
+      "build_timestamp": "2026-05-10T18:22:11Z",
+      "commit_sha": "192057cbf85166c7f3b828da6ed5d13619e16c0e",
+      "commit_sha_short": "192057cb",
+      "min_dispatcharr_version": "v0.22.0"
+    },
     {
       "version": "1.1.1",
       "url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.1/embyfin-stream-cleanup-1.1.1.zip",
@@ -54,12 +63,12 @@
     }
   ],
   "latest": {
-    "version": "1.1.1",
-    "url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.1/embyfin-stream-cleanup-1.1.1.zip",
-    "checksum_sha256": "e1c3e6d3ecb337d22c26a06c4ca1d4de6cf0c91a828f21194ba0670846be7a4e",
-    "build_timestamp": "2026-04-28T18:30:36Z",
-    "commit_sha": "e8904fa1b588cbe1f0f24d37f298f0ef0fc0b923",
-    "commit_sha_short": "e8904fa1",
+    "version": "1.1.2",
+    "url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.2/embyfin-stream-cleanup-1.1.2.zip",
+    "checksum_sha256": "50473f2ac6ebf5f2fd693d688043c601fdc4f0514f769f3eec6832427f82a3ca",
+    "build_timestamp": "2026-05-10T18:22:11Z",
+    "commit_sha": "192057cbf85166c7f3b828da6ed5d13619e16c0e",
+    "commit_sha_short": "192057cb",
     "min_dispatcharr_version": "v0.22.0"
   }
 }
