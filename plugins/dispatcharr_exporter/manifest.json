@@ -4,8 +4,17 @@
   "description": "Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring",
   "author": "sethwv",
   "license": "MIT",
-  "latest_version": "3.0.0",
+  "latest_version": "3.0.1",
   "versions": [
+    {
+      "version": "3.0.1",
+      "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.1/dispatcharr-exporter-3.0.1.zip",
+      "checksum_sha256": "2269a61653f46ab943a0178b6cfdb0da0c7c05f6a6864c9862d5c6ce95ba3149",
+      "build_timestamp": "2026-05-10T18:23:04Z",
+      "commit_sha": "86557ac3b4e5e0bf90f80ee8129de2c8836c15d1",
+      "commit_sha_short": "86557ac3",
+      "min_dispatcharr_version": "v0.22.0"
+    },
     {
       "version": "3.0.0",
       "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
@@ -119,12 +128,12 @@
     }
   ],
   "latest": {
-    "version": "3.0.0",
-    "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.0/dispatcharr-exporter-3.0.0.zip",
-    "checksum_sha256": "8e457cbd0596f8474750a98e43e19c56a192b6297d58c5e6ca4a354e4150889d",
-    "build_timestamp": "2026-04-18T17:30:48Z",
-    "commit_sha": "3cd03ad90f9b8162faed9a0c7e81e7a13ce11dfb",
-    "commit_sha_short": "3cd03ad9",
+    "version": "3.0.1",
+    "url": "https://github.com/swvn-dispatch/dispatcharr-exporter/releases/download/v3.0.1/dispatcharr-exporter-3.0.1.zip",
+    "checksum_sha256": "2269a61653f46ab943a0178b6cfdb0da0c7c05f6a6864c9862d5c6ce95ba3149",
+    "build_timestamp": "2026-05-10T18:23:04Z",
+    "commit_sha": "86557ac3b4e5e0bf90f80ee8129de2c8836c15d1",
+    "commit_sha_short": "86557ac3",
     "min_dispatcharr_version": "v0.22.0"
   }
 }
