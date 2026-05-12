@@ -1,3 +1,3 @@
-v3.0.0: User metrics, expanded type labels, legacy metric removal
+fix: compatibility with live_proxy rename in new Dispatcharr versions
 
-Adds opt-in user metrics (info, stream limits, active streams), a dedicated M3U account info gauge, and `type` labels to additional stream metrics for consistent filtering. Client metrics now carry `user_id` and `username` labels. Removes all legacy metric formats and the update-check action. The manual stop flag now prevents auto-start from overriding a deliberate stop. Minimum Dispatcharr version raised to v0.22.0.
+Dispatcharr renamed its internal `ts_proxy` module to `live_proxy`, which caused the plugin to fail on load. The import now tries `live_proxy` first and falls back to `ts_proxy`, and the Redis key prefix is set accordingly, so the plugin works on both old and new Dispatcharr installs.

@@ -1,2 +1,2 @@
-- Channels with an active DVR recording are no longer terminated as pool-absent - the plugin now queries in-progress recordings from each media server and protects those channels
-- The dashboard session counts now include recording sessions, with per-server breakdowns showing live vs. DVR counts and a DVR badge on affected channel cards
+- Fixed client matching for setups with multiple media servers that share session identifiers
+- Fixed compatibility with newer Dispatcharr versions that renamed the internal `ts_proxy` module to `live_proxy`

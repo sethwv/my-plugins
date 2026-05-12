@@ -1,9 +1,1 @@
-- New user metrics - track user info, stream limits, and active stream counts per user (opt-in via settings)
-- M3U account info metric for account metadata
-- `dispatcharr_active_streams` now breaks down by `type="live"` and `type="vod"`
-- `type` label added to several stream metrics (fps, bitrates, channel number, stream index, available streams)
-- Client metrics now include `user_id` and `username` labels
-- Stopping the server now prevents auto-start from restarting it
-- Legacy metrics and the `Include Legacy Metric Formats` setting have been removed
-- `Check for Updates` action and `Disable Update Notifications` setting removed
-- Requires Dispatcharr v0.22.0 or later
+- Fixed compatibility with newer Dispatcharr versions that renamed the internal `ts_proxy` module to `live_proxy`

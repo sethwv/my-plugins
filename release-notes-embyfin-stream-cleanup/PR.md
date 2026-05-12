@@ -1,3 +1,3 @@
-Protect active DVR recording channels from pool-absent termination
+fix: client matching for multi-server setups and live_proxy compatibility
 
-The recording backend connects to Dispatcharr as a client but does not appear as a regular playback session, so channels with an in-progress recording were treated as pool-absent and stopped. The plugin now calls the media server LiveTV recordings API at each scan cycle to identify in-progress recordings and adds those channels to the pool before evaluating termination candidates. The dashboard is updated to reflect recording session counts alongside live sessions, with per-server breakdowns and a DVR badge on affected channel cards.
+Fixes two issues: client matching logic now correctly scopes session identifiers per media server, preventing cross-server mismatches in setups with multiple servers sharing identifiers. Also updates the Dispatcharr proxy import to try `live_proxy` first with a fallback to `ts_proxy` for older installs.
