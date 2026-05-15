@@ -25,15 +25,15 @@
       "description": "Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections",
       "author": "sethwv",
       "license": "MIT",
-      "latest_version": "1.1.2",
-      "last_updated": "2026-05-10T18:22:11Z",
+      "latest_version": "1.2.0",
+      "last_updated": "2026-05-15T16:59:09Z",
       "manifest_url": "plugins/embyfin_stream_cleanup/manifest.json",
-      "latest_url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.1.2/embyfin-stream-cleanup-1.1.2.zip",
-      "latest_sha256": "50473f2ac6ebf5f2fd693d688043c601fdc4f0514f769f3eec6832427f82a3ca",
+      "latest_url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup/releases/download/v1.2.0/embyfin-stream-cleanup-1.2.0.zip",
+      "latest_sha256": "0832203697916d538e5e930c9ef6f262174daac62482f4a6c4306536d77896ca",
       "icon_url": "plugins/embyfin_stream_cleanup/logo.png",
       "min_dispatcharr_version": "v0.22.0",
       "discord_thread": "https://discord.com/channels/1340492560220684331/1491487318832447668",
-      "help_url": "https://github.com/swvn-dispatch/emby-stream-cleanup"
+      "help_url": "https://github.com/swvn-dispatch/embyfin-stream-cleanup"
     },
     {
       "slug": "ldap_auth",
