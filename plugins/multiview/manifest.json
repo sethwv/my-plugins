@@ -6,10 +6,10 @@
   "license": "MIT",
   "versions": [
     {
-      "version": "0.0.0-dev-e74ab91f",
+      "version": "0.0.0-dev-b4758401",
       "url": "https://github.com/swvn-dispatch/dispatcharr-multiview/releases/download/dev-latest/multiview-dev-latest.zip",
-      "checksum_sha256": "6a22ca5e5aedb37ece0f00dfca1388be90448ec9973df6907c35db02dede3d93",
-      "build_timestamp": "2026-05-25T23:37:24Z",
+      "checksum_sha256": "b2217daa942187ec107daca3704592a1dc133d7ade00fcf198315654b9c4dbd6",
+      "build_timestamp": "2026-05-25T23:55:23Z",
       "prerelease": true,
       "commit_sha": "16c48680afc36faa236d043000fff104bc50bbf3",
       "commit_sha_short": "16c48680"
