@@ -1,1 +1,3 @@
-Initial release of the Multiview plugin.
+Initial release of the Dispatcharr Multiview plugin (v0.1.0)
+
+Adds the Multiview plugin, which tiles multiple Dispatcharr channel streams into a single MPEG-TS output using FFmpeg xstack. Layouts appear as standard M3U channels and support three styles (Auto Grid, Featured, Top Featured), classic or regex channel selection, hardware encoding (NVIDIA, Intel QuickSync, VA-API, libx264), per-tile audio tracks switchable in compatible players, a startup placeholder with channel logos, and 14-day XMLTV EPG generation. All streams open through Dispatcharr's ProxyServer so connections appear in stats and respect stream profiles.

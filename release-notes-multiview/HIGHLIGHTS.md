@@ -1,1 +1,8 @@
-Initial release of the Multiview plugin.
+- Tile multiple Dispatcharr channels into one stream - each layout shows up as a normal M3U channel in any player
+- Three layouts: Auto Grid, Featured (big left + stack right), Top Featured (big top + row bottom)
+- Pick channels from dropdowns or use a regex pattern to match them automatically at stream time
+- Hardware encoding: NVIDIA, Intel QuickSync, AMD/Intel VA-API, or software (libx264)
+- Multi-audio: output one track per tile and switch between them in VLC, Infuse, or mpv
+- Streams open instantly - a placeholder with channel logos appears while the real stream starts up
+- EPG included: 14-day guide data per layout with configurable title, categories, and subtitle
+- Fully integrated with Dispatcharr - connections show in stats, stream profiles and fallback apply
